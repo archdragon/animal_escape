@@ -4,6 +4,11 @@ using System.Collections;
 public class AnimalController : MonoBehaviour {
 	private AnimalHealth animalHealth;
 	private Animator animalAnimator;
+	private bool isMoving = false;
+	private Vector3 moveTarget;
+	private float movementTargetX;
+	private float movementTargetZ;
+	public float speed = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -50,22 +55,44 @@ public class AnimalController : MonoBehaviour {
 			animalHealth.ReactToCollision(obstacle);
 		} else {
 			Vector3 vector = new Vector3(x, 0.0f, z);
-			transform.Translate(vector);
-			animalAnimator.SetBool("Moving", true);
+			//transform.Translate(vector);
+			StartMoving(targetX, targetZ);
 		}
+	}
+
+	void StartMoving(float targetX, float targetZ) {
+		movementTargetX = targetX;
+		movementTargetZ = targetZ;
+		isMoving = true;
+		animalAnimator.SetBool("Moving", true);
+	}
+
+	void StopMoving() { 
+		isMoving = false;
+		animalAnimator.SetBool("Moving", false);
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp("w") || Input.GetKeyUp(KeyCode.UpArrow)) {
-			Move(-1.0f, 0.0f);
-		} else if(Input.GetKeyUp("s") || Input.GetKeyUp(KeyCode.DownArrow)) {
-			Move(1.0f, 0.0f);
-		} else if(Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow)) {
-			Move(0.0f, 1.0f);
-		} else if(Input.GetKeyUp("a") || Input.GetKeyUp(KeyCode.LeftArrow)) {
-			Move(0.0f, -1.0f);
-		}
+		if (isMoving) {
+			float step = speed * Time.deltaTime;
+			Vector3 targetVector = new Vector3 (movementTargetX, transform.position.y, movementTargetZ);
+			transform.position = Vector3.MoveTowards(transform.position, targetVector, step);
+
+			if (Vector3.Distance (transform.position, targetVector) < 0.05) {
+				StopMoving();
+			}
+		} else {
+			if (Input.GetKeyUp ("w") || Input.GetKeyUp (KeyCode.UpArrow)) {
+				Move (-1.0f, 0.0f);
+			} else if (Input.GetKeyUp ("s") || Input.GetKeyUp (KeyCode.DownArrow)) {
+				Move (1.0f, 0.0f);
+			} else if (Input.GetKeyUp ("d") || Input.GetKeyUp (KeyCode.RightArrow)) {
+				Move (0.0f, 1.0f);
+			} else if (Input.GetKeyUp ("a") || Input.GetKeyUp (KeyCode.LeftArrow)) {
+				Move (0.0f, -1.0f);
+			}
+		} 
 	}
 
 	public void Reset() {
