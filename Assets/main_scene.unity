@@ -213,7 +213,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &158660231
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ Transform:
   - {fileID: 1179674047}
   - {fileID: 1557775570}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &404044614
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ Transform:
   - {fileID: 1709845152}
   - {fileID: 16233677}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &528898432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SHEEP
+          m_StringArgument: Sheep
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -681,44 +681,73 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566114127}
+--- !u!1 &594831252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 594831253}
+  m_Layer: 0
+  m_Name: Animals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &594831253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594831252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 236, y: 443, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1407865273}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1001 &668625161
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 594831253}
     m_Modifications:
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6276546
+      value: -236.001
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -180.31276
+      value: -624.232
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6433046
+      value: 1.889
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50000083
+      value: -0.5000829
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.49999925
+      value: 0.5000829
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4999993
+      value: 0.4999171
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5000007
+      value: 0.4999171
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalScale.x
@@ -747,6 +776,22 @@ Prefab:
     - target: {fileID: 9500000, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
@@ -818,7 +863,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: PIG
+          m_StringArgument: Pig
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
@@ -896,7 +941,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &892613383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1060,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 22.571001, y: -90.00001, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1053426491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1357,10 @@ RectTransform:
   m_AnchoredPosition: {x: 441, y: -82}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &1407865273 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+  m_PrefabInternal: {fileID: 668625161}
 --- !u!1 &1414297791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1609,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: COW
+          m_StringArgument: Cow
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1872,7 +1921,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1806213316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,7 +2010,7 @@ RectTransform:
   m_Children:
   - {fileID: 263574612}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2056,4 +2105,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 89.981, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3

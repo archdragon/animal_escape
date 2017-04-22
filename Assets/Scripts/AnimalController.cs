@@ -8,7 +8,11 @@ public class AnimalController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animalHealth = gameObject.GetComponent<AnimalHealth> ();
-		animalAnimator = GameObject.Find("Animal/Sheep").GetComponent<Animator> ();
+		Reset();
+	}
+
+	void ConnectAnimator() {
+		animalAnimator = GameObject.Find("Animal").transform.GetChild(0).gameObject.GetComponent<Animator> ();
 	}
 
 	GameObject FindObstacleAt(float x, float z) {
@@ -59,6 +63,7 @@ public class AnimalController : MonoBehaviour {
 	}
 
 	public void Reset() {
+		ConnectAnimator();
 		transform.position = new Vector3(0f, -180.588f, 2f);
 	}
 }

@@ -53,8 +53,39 @@ public class GameState : MonoBehaviour {
 		AnimalController controller = player.GetComponent<AnimalController> ();
 		AnimalHealth health = player.GetComponent<AnimalHealth> ();
 
+		ChooseAnimalModel(name);
+
 		controller.Reset();
 		health.Reset();
 		TransitionTo("PLAYING");
+	}
+
+	void ChooseAnimalModel(string name) {
+		GameObject.Find ("Animal").transform.GetChild (0).SetParent(
+			GameObject.Find("Animals").transform
+		);
+		GameObject newAnimal = GameObject.Find ("Animals").transform.Find(name).gameObject;
+		newAnimal.transform.SetParent(
+			GameObject.Find("Animal").transform
+		);
+		newAnimal.transform.localPosition = new Vector3(0f, -0.3f, 0f);
+
+		HideUnusedModels();
+		ShowUsedModels();
+	}
+
+	void HideUnusedModels() {
+		Transform animals = GameObject.Find ("Animals").transform;
+		foreach (Transform animal in animals) {
+			animal.gameObject.SetActive(false);
+		}
+
+	}
+
+	void ShowUsedModels() {
+		Transform animals = GameObject.Find ("Animal").transform;
+		foreach (Transform animal in animals) {
+			animal.gameObject.SetActive(true);
+		}
 	}
 }
