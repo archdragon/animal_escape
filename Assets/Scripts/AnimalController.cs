@@ -75,7 +75,14 @@ public class AnimalController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isMoving) {
-			float step = speed * Time.deltaTime;
+
+			float alteredSpeed = speed;
+
+			if (movementTargetZ != 0.0f) {
+				alteredSpeed = speed * 2.0f;
+			}
+
+			float step = alteredSpeed * Time.deltaTime;
 			Vector3 targetVector = new Vector3 (movementTargetX, transform.position.y, movementTargetZ);
 			transform.position = Vector3.MoveTowards(transform.position, targetVector, step);
 
