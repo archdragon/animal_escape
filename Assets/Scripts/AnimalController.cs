@@ -46,6 +46,7 @@ public class AnimalController : MonoBehaviour {
 		if (IsFinishReached (targetX, targetZ)) {
 		} else if(IsOutOfBounds(targetX, targetZ)) {
 		} else if(obstacle != null) {
+			obstacle.gameObject.GetComponent<Obstacle>().Reveal();
 			animalHealth.ReactToCollision(obstacle);
 		} else {
 			Vector3 vector = new Vector3(x, 0.0f, z);

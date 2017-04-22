@@ -14,6 +14,11 @@ public class Obstacle : MonoBehaviour {
 	
 	}
 
+	public void Reveal() {
+		MeshRenderer mesh = transform.Find ("Body").gameObject.GetComponent<MeshRenderer> ();
+		mesh.enabled = true;
+	}
+
 	public void Toggle(string animalName) {
 		bool shouldDissapear = false;
 
