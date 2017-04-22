@@ -16,7 +16,10 @@ public class Obstacle : MonoBehaviour {
 
 	public void Reveal() {
 		MeshRenderer mesh = transform.Find ("Body").gameObject.GetComponent<MeshRenderer> ();
-		mesh.enabled = true;
+		if (mesh.enabled == false) {
+			mesh.enabled = true;
+			gameObject.GetComponent<ParticleSystem> ().Play ();
+		}
 	}
 
 	public void Toggle(string animalName) {

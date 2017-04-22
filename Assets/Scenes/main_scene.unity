@@ -920,28 +920,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!1 &831126601 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012992723920, guid: 323e545d3c8f4492eb998611b30bfa5d,
-    type: 2}
-  m_PrefabInternal: {fileID: 2119349184}
 --- !u!4 &831126602 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010163279644, guid: 323e545d3c8f4492eb998611b30bfa5d,
     type: 2}
   m_PrefabInternal: {fileID: 2119349184}
---- !u!114 &831126603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 831126601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f888919bd8244e7a9e539470b629931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleType: Fence
 --- !u!1 &892613383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,28 +1236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleType: Fence
---- !u!1 &1162967195 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013342581348, guid: b185ca230ea7c4b819e01a0162200257,
-    type: 2}
-  m_PrefabInternal: {fileID: 1851661560}
 --- !u!4 &1162967196 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010007693334, guid: b185ca230ea7c4b819e01a0162200257,
     type: 2}
   m_PrefabInternal: {fileID: 1851661560}
---- !u!114 &1162967197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1162967195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f888919bd8244e7a9e539470b629931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleType: Grass
 --- !u!224 &1383227045
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1298,28 +1264,11 @@ RectTransform:
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
   m_PrefabInternal: {fileID: 668625161}
---- !u!1 &1414297791 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013645783310, guid: b65e0f26c5af14c628b4965dcd094773,
-    type: 2}
-  m_PrefabInternal: {fileID: 1432209812}
 --- !u!4 &1414297792 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011556318272, guid: b65e0f26c5af14c628b4965dcd094773,
     type: 2}
   m_PrefabInternal: {fileID: 1432209812}
---- !u!114 &1414297793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1414297791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f888919bd8244e7a9e539470b629931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleType: Rock
 --- !u!1001 &1432209812
 Prefab:
   m_ObjectHideFlags: 0
