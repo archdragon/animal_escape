@@ -41,7 +41,7 @@ public class AnimalController : MonoBehaviour {
 		} else {
 			Vector3 vector = new Vector3(x, 0.0f, z);
 			transform.Translate(vector);
-			//animalAnimator.SetBool("Moving", true);
+			animalAnimator.SetBool("Moving", true);
 		}
 	}
 
@@ -56,5 +56,9 @@ public class AnimalController : MonoBehaviour {
 		} else if(Input.GetKeyUp("a") || Input.GetKeyUp(KeyCode.LeftArrow)) {
 			Move(0.0f, -1.0f);
 		}
+	}
+
+	public void Reset() {
+		transform.position = new Vector3(0f, -180.588f, 2f);
 	}
 }
