@@ -14,6 +14,10 @@ public class SceneController : MonoBehaviour {
 	}
 
 	public void GoToLevel(string name) {
-		Application.LoadLevel(name);
+		if (name == "exit") {
+			Application.Quit ();
+		} else {
+			Application.LoadLevel (name);
+		}
 	}
 }

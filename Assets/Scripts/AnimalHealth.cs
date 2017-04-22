@@ -14,10 +14,10 @@ public class AnimalHealth : MonoBehaviour {
 
 	void SubstractHealth(int amount) {
 		healthLevel -= amount;
-		if (healthLevel <= 0) {
-			gameState.TransitionTo ("DEAD");
-		}
 		RefreshUI();
+		if (healthLevel <= 0) {
+			StartCoroutine(DieAfterTime(0.5f));
+		}
 	}
 
 	public void Reset() {
@@ -45,9 +45,17 @@ public class AnimalHealth : MonoBehaviour {
 	}
 
 	void RefreshUI() {
-		int heartId = Mathf.Clamp(healthLevel - 1, 0, 2);
+		int heartId = Mathf.Clamp(healthLevel, 0, 3);
 
 		hearts.GetComponent<Image>().sprite = heartSprites[heartId];
+	}
+
+	IEnumerator DieAfterTime(float time)
+	{
+		yield return new WaitForSeconds(time);
+
+		// Code to execute after the delay
+		gameState.TransitionTo ("DEAD");
 	}
 		
 }

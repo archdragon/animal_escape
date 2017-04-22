@@ -8,11 +8,13 @@ public class AnimalController : MonoBehaviour {
 	private Vector3 moveTarget;
 	private float movementTargetX;
 	private float movementTargetZ;
+	private SceneController sceneController;
 	public float speed = 1.0f;
 
 	// Use this for initialization
 	void Start () {
 		animalHealth = gameObject.GetComponent<AnimalHealth> ();
+		sceneController = GameObject.Find ("Scene Controller").GetComponent<SceneController> ();
 		Reset();
 	}
 
@@ -37,7 +39,7 @@ public class AnimalController : MonoBehaviour {
 	}
 
 	bool IsOutOfBounds(float x, float z) {
-		return (z < 0.0f || z > 4.0f || x > 5.0f);
+		return (Mathf.Round(z) < 0.0f || Mathf.Round(z) > 4.0f || Mathf.Round(x) > 5.0f);
 	}
 
 	bool IsFinishReached(float x, float z) {
@@ -49,9 +51,12 @@ public class AnimalController : MonoBehaviour {
 		float targetZ = transform.position.z + z;
 		GameObject obstacle = FindObstacleAt(targetX, targetZ);
 		if (IsFinishReached (targetX, targetZ)) {
+			sceneController.GoToLevel ("victory_screen");
 		} else if(IsOutOfBounds(targetX, targetZ)) {
+			Debug.Log("Out of bounds");
 		} else if(obstacle != null) {
 			obstacle.gameObject.GetComponent<Obstacle>().Reveal();
+			GetComponent<ParticleSystem> ().Play ();
 			animalHealth.ReactToCollision(obstacle);
 		} else {
 			Vector3 vector = new Vector3(x, 0.0f, z);
@@ -106,4 +111,6 @@ public class AnimalController : MonoBehaviour {
 		ConnectAnimator();
 		transform.position = new Vector3(0f, -180.588f, 2f);
 	}
+
+
 }
