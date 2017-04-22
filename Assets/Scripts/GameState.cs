@@ -41,7 +41,7 @@ public class GameState : MonoBehaviour {
 	void Start () {
 		selectScreen = GameObject.Find ("Canvas - Select Character");
 		player = GameObject.Find("Player");
-		TransitionTo("PLAYING");
+		RestartWithCharacter("Sheep");
 	}
 	
 	// Update is called once per frame

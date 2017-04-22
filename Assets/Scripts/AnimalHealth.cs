@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AnimalHealth : MonoBehaviour {
 	public int healthLevel = 3;
 	private GameState gameState;
+	public GameObject hearts;
+	public Sprite[] heartSprites; 
 	// Use this for initialization
 	void Start () {
 		gameState = GameObject.Find ("Game State").GetComponent<GameState> ();
@@ -14,10 +17,12 @@ public class AnimalHealth : MonoBehaviour {
 		if (healthLevel <= 0) {
 			gameState.TransitionTo ("DEAD");
 		}
+		RefreshUI();
 	}
 
 	public void Reset() {
 		healthLevel = 3;
+		RefreshUI();
 	}
 
 	public void ReactToCollision(GameObject obstacle) {
@@ -38,4 +43,11 @@ public class AnimalHealth : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void RefreshUI() {
+		int heartId = Mathf.Clamp(healthLevel - 1, 0, 2);
+
+		hearts.GetComponent<Image>().sprite = heartSprites[heartId];
+	}
+		
 }
