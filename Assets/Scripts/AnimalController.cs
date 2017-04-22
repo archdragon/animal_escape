@@ -32,14 +32,19 @@ public class AnimalController : MonoBehaviour {
 	}
 
 	bool IsOutOfBounds(float x, float z) {
-		return (z < 0.0f || z > 4.0f || x > 5.0f || x < -50.0f);
+		return (z < 0.0f || z > 4.0f || x > 5.0f);
+	}
+
+	bool IsFinishReached(float x, float z) {
+		return (x < -27.0f);
 	}
 
 	void Move (float x, float z) {
 		float targetX = transform.position.x + x;
 		float targetZ = transform.position.z + z;
 		GameObject obstacle = FindObstacleAt(targetX, targetZ);
-		if(IsOutOfBounds(targetX, targetZ)) {
+		if (IsFinishReached (targetX, targetZ)) {
+		} else if(IsOutOfBounds(targetX, targetZ)) {
 		} else if(obstacle != null) {
 			animalHealth.ReactToCollision(obstacle);
 		} else {

@@ -70,6 +70,7 @@ public class GameState : MonoBehaviour {
 		);
 		newAnimal.transform.localPosition = new Vector3(0f, -0.3f, 0f);
 
+		UpdateObstacleVisibility(name);
 		HideUnusedModels();
 		ShowUsedModels();
 	}
@@ -86,6 +87,13 @@ public class GameState : MonoBehaviour {
 		Transform animals = GameObject.Find ("Animal").transform;
 		foreach (Transform animal in animals) {
 			animal.gameObject.SetActive(true);
+		}
+	}
+
+	void UpdateObstacleVisibility(string animalName) {
+		Transform obstacles = GameObject.Find ("Obstacles").transform;
+		foreach (Transform obstacle in obstacles) {
+			obstacle.gameObject.GetComponent<Obstacle>().Toggle(animalName);
 		}
 	}
 }
