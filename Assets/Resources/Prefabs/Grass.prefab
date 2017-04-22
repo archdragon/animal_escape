@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 114000012155594188}
   - 199: {fileID: 199000013746227960}
   - 198: {fileID: 198000010496139594}
+  - 114: {fileID: 114000011696209236}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Obstacle
@@ -71,9 +72,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013342581348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.12600708, z: 7}
-  m_LocalScale: {x: 1.000001, y: 1, z: 1.000001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: -0.12600708, z: 7}
+  m_LocalScale: {x: 1.0000019, y: 1, z: 1.0000019}
+  m_LocalEulerAnglesHint: {x: 0, y: -21.292002, z: 0}
   m_Children:
   - {fileID: 4000010231965356}
   - {fileID: 4000012951859480}
@@ -85,10 +86,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012126561328}
-  m_LocalRotation: {x: -0.5000008, y: 0.49999925, z: 0.49999934, w: 0.5000007}
-  m_LocalPosition: {x: 0.329, y: -0.482, z: -0.5}
+  m_LocalRotation: {x: -0.593347, y: 0.3846292, z: 0.38462904, w: 0.5933467}
+  m_LocalPosition: {x: 0.3627923, y: -0.48199463, z: 0.1295631}
   m_LocalScale: {x: 35, y: 35, z: 35}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.981, y: 0, z: 66.102005}
   m_Children: []
   m_Father: {fileID: 4000010007693334}
   m_RootOrder: 0
@@ -190,6 +191,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000011696209236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013342581348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f888919bd8244e7a9e539470b629931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleType: Grass
 --- !u!114 &114000012155594188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,7 +265,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 204333665
+  randomSeed: 349737439
   InitialModule:
     serializedVersion: 2
     enabled: 1
