@@ -23,22 +23,22 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	public void Toggle(string animalName) {
-		bool shouldDissapear = false;
+		bool shouldDissapear = true;
 
 		switch (animalName) {
 			case "Pig":
-				if (obstacleType == "Rock") {
-					shouldDissapear = true;
+				if (obstacleType == "Mud") {
+					shouldDissapear = false;
 				}
 			break;
 			case "Cow":
-				if (obstacleType == "Fence") {
-					shouldDissapear = true;
+				if (obstacleType == "Log") {
+					shouldDissapear = false;
 				}
 			break;
 			case "Sheep":
-				if (obstacleType == "Grass") {
-					shouldDissapear = true;
+				if (obstacleType == "Rock") {
+					shouldDissapear = false;
 				}
 			break;
 		}
