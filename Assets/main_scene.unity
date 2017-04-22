@@ -293,6 +293,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158660231}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &259503516
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 594831253}
+    m_Modifications:
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -235.98918
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -624
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0108092865
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.50000083
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49999928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49999928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 42.4391
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 42.4391
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.981
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &263574611
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +766,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1407865273}
+  - {fileID: 2058358230}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1001 &668625161
@@ -792,6 +851,10 @@ Prefab:
     - target: {fileID: 400004, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4b22d30807344f98a46e156cee56d4e, type: 3}
@@ -2106,3 +2169,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &2058358229 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+  m_PrefabInternal: {fileID: 259503516}
+--- !u!4 &2058358230 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: c3f1b5766fac746b7ae27b6483a55618, type: 3}
+  m_PrefabInternal: {fileID: 259503516}
+--- !u!95 &2058358231
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058358229}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9fc940a4c98d42ea9f806c4dc50a4eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
