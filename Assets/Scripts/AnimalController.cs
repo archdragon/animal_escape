@@ -60,6 +60,7 @@ public class AnimalController : MonoBehaviour {
 			animalHealth.ReactToCollision(obstacle);
 			PlaySound ("Bump");
 		} else {
+			PlaySound ("Move");
 			Vector3 vector = new Vector3(x, 0.0f, z);
 			//transform.Translate(vector);
 			StartMoving(targetX, targetZ);
