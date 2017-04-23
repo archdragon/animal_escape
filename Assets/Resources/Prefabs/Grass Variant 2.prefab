@@ -49,6 +49,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013298209850}
+  - 95: {fileID: 95000010602743626}
   m_Layer: 0
   m_Name: GrassPatchB
   m_TagString: Untagged
@@ -109,8 +110,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012295823810}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.19, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -136,10 +137,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013061212084}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -2.7584314, y: -181.31, z: -4.1218376}
-  m_LocalScale: {x: 42.12034, y: 42.120323, z: 42.120323}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.50000083, y: 0.49999925, z: 0.4999993, w: 0.5000007}
+  m_LocalPosition: {x: -2.681, y: -181.31, z: -4.971}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalEulerAnglesHint: {x: -89.981, y: 0, z: 90.00001}
   m_Children:
   - {fileID: 4000010493922382}
   m_Father: {fileID: 4000011002161430}
@@ -193,3 +194,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013561990578}
   m_Mesh: {fileID: 4300000, guid: 51c9900fd6f544cc69d4a75058b2cd6c, type: 3}
+--- !u!95 &95000010602743626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013061212084}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5d7756bf30b04799b8d4cf949720bb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

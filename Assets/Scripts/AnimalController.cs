@@ -58,6 +58,7 @@ public class AnimalController : MonoBehaviour {
 			obstacle.gameObject.GetComponent<Obstacle>().Reveal();
 			GetComponent<ParticleSystem> ().Play ();
 			animalHealth.ReactToCollision(obstacle);
+			PlaySound ("Bump");
 		} else {
 			Vector3 vector = new Vector3(x, 0.0f, z);
 			//transform.Translate(vector);
@@ -110,6 +111,10 @@ public class AnimalController : MonoBehaviour {
 	public void Reset() {
 		ConnectAnimator();
 		transform.position = new Vector3(0f, -180.588f, 2f);
+	}
+
+	public void PlaySound(string name) {
+		transform.Find ("Sounds/" + name).gameObject.GetComponent<AudioSource> ().Play ();
 	}
 
 
