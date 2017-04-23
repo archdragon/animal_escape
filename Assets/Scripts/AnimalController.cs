@@ -38,6 +38,23 @@ public class AnimalController : MonoBehaviour {
 		return null;
 	}
 
+	GameObject FindGrassAt(float x, float z) {
+		int gridX = Mathf.RoundToInt(x);
+		int gridZ = Mathf.RoundToInt(z);
+		GameObject[] grasses;
+		grasses = GameObject.FindGameObjectsWithTag("Grass");
+
+		foreach (GameObject grass in grasses) {
+			Debug.Log ("Checking grass");
+			//Debug.Log((int)obstacle.transform.position.x + " " + gridX + " " + (int)obstacle.transform.position.y + " " + gridY);
+			if(Mathf.RoundToInt(grass.transform.position.x + 2.0f) == gridX && Mathf.RoundToInt(grass.transform.position.z + 2.0f) == gridZ) {
+				Debug.Log("Found Grass");
+				return grass;
+			}
+		}
+		return null;
+	}
+
 	bool IsOutOfBounds(float x, float z) {
 		return (Mathf.Round(z) < 0.0f || Mathf.Round(z) > 4.0f || Mathf.Round(x) > 5.0f);
 	}
@@ -50,6 +67,8 @@ public class AnimalController : MonoBehaviour {
 		float targetX = transform.position.x + x;
 		float targetZ = transform.position.z + z;
 		GameObject obstacle = FindObstacleAt(targetX, targetZ);
+		GameObject grass = FindGrassAt(targetX, targetZ);
+
 		if (IsFinishReached (targetX, targetZ)) {
 			sceneController.GoToLevel ("victory_screen");
 		} else if(IsOutOfBounds(targetX, targetZ)) {
@@ -64,6 +83,13 @@ public class AnimalController : MonoBehaviour {
 			Vector3 vector = new Vector3(x, 0.0f, z);
 			//transform.Translate(vector);
 			StartMoving(targetX, targetZ);
+
+			if (grass != null) {
+				Debug.Log("Found Grass - Animating");
+				GameObject innerGrass = grass.transform.GetChild(0).gameObject;
+				Animator animator = innerGrass.GetComponent<Animator> ();
+				animator.SetTrigger("Entered");
+			}
 		}
 	}
 
