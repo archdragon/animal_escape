@@ -1,23 +1,15 @@
 fileFormatVersion: 2
-guid: 51c9900fd6f544cc69d4a75058b2cd6c
-timeCreated: 1492894017
+guid: c73b1561b943849269f8c2a5049c4632
+timeCreated: 1492936725
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Bone
-    100002: Bone_end
-    100004: GrassPatchB
-    100006: //RootNode
-    100008: GrassPatchB.001
-    400000: Bone
-    400002: Bone_end
-    400004: GrassPatchB
-    400006: //RootNode
-    400008: GrassPatchB.001
-    2300000: GrassPatchB
-    3300000: GrassPatchB
-    4300000: GrassPatchB
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: TreeD
   materials:
     importMaterials: 1
     materialName: 0

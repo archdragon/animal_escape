@@ -115,7 +115,9 @@ public class AnimalController : MonoBehaviour {
 	}
 
 	public void PlaySound(string name) {
-		transform.Find ("Sounds/" + name).gameObject.GetComponent<AudioSource> ().Play ();
+		AudioSource audioSource = transform.Find ("Sounds/" + name).gameObject.GetComponent<AudioSource> ();
+		audioSource.pitch = (Random.Range(0.6f, 1.4f));
+		audioSource.Play();
 	}
 
 
